@@ -24,8 +24,10 @@ describe('Testando o componente FavoritePokemon', () => {
     }];
     renderWithRouter(<FavoritePokemon pokemonList={ pokemonList } />);
 
-    const textEl = screen.getByText(/alakazam/i);
+    const nameEl = screen.getByText(/alakazam/i);
+    const typeEl = screen.getByText(/psychic/i);
 
-    expect(textEl).toBeInTheDocument();
+    expect(nameEl).toBeInTheDocument();
+    expect(typeEl).toBeInTheDocument();
   });
 });
